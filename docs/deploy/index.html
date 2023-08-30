@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl">BSPoke</a>
+      <a href="/" class="btn btn-ghost normal-case text-xl">BSPoke</a>
     </div>
     <div class="navbar-end">
       <button onclick="searchModal.showModal()" class="btn btn-ghost btn-circle">
@@ -61,9 +61,53 @@
 </div>
 
 	<main>
-		<article class="prose lg:prose-xl mx-auto max-w-screen-lg px-2"><h1>A propos du site</h1>
-<p>Ce site est un site statiquement généré avec <a href="https://www.11ty.dev/">11ty</a> et utilise <a href="https://tailwindcss.com">TailwindCSS</a> + <a href="https://daisyui.com/">DaisyUI</a> pour le style.</p>
-<p>Il sert de site démo pour voir comment fonctionne les site statiquement généré avec 11ty et comment l'intégration de contenu peut se faire.</p>
+		<article class="prose lg:prose-xl mx-auto max-w-screen-lg px-2"><h1>Déploiement</h1>
+<h2>Prérequis</h2>
+<p>Avant de partir sur le déploiement du projet, assurez d'avoir bien respecté les étapes de la <a href="/documentation">documentation</a> pour le développement.</p>
+<h2>Configuration du serveur</h2>
+<p>Cette étape n'est plus nécessaire, car le serveur est déjà configuré, mais s'il faut refaire la configuration sur un autre serveur, voici les étapes à suivre.</p>
+<p><strong>Note :</strong> Pour réaliser ces étapes, il faut avoir un domaine entier réservé au serveur. Il n'est pas possible de faire cohabiter l'application avec un autre site web sur le même domaine.</p>
+<h3>Ajout du dépôt Git</h3>
+<p>Pour ajouter le dépôt Git, rendez-vous sur le serveur Plesk. Ensuite, allez sur le domaine et cliquez sur <code>Git</code>.</p>
+<p>Ensuite, cliquez sur <code>Add Repository</code> pour ajouter le dépôt Git.</p>
+<p>Ensuite, entrez les informations suivantes :</p>
+<ul>
+<li><strong>Repository name</strong> : <code>stuart</code></li>
+<li><strong>Repository URL</strong> : <code>git@github.com:ServiceInformation/next-stuart.git</code></li>
+<li><strong>Repository branch</strong> : <code>main</code></li>
+<li><strong>Server path</strong> : <code>/path/to/root/document/server</code></li>
+</ul>
+<blockquote>
+<p><strong>Attention :</strong> Si vous êtes sur un serveur ou il y a déjà 1 ou plusieurs dépôts Git, il faut changer le nom du dépôt pour éviter les conflits.</p>
+</blockquote>
+<h3>Configuration du Node.js</h3>
+<p>Pour configurer Node.js, il faut d'abord avoir ajouter le dépôt Git et fait un premier <code>Pull now</code> pour récupérer les fichiers du projet.</p>
+<p>Ensuite, allez sur le domaine et cliquez sur <code>Node.js</code>.</p>
+<blockquote>
+<p>Si vous ne voyez pas <code>Node.js</code>, il faut d'abord installer le module <code>Node.js</code> sur le serveur en cliquant sur <code>Install Application</code> et en sélectionnant <code>Node.js</code>.</p>
+</blockquote>
+<p>Ensuite, cliquez sur <code>Enable Node.js</code> pour activer Node.js sur le domaine. Sélectionnez la version <code>18</code> la plus récente possible et cliquez sur <code>Apply</code>.</p>
+<p>Configurez ensuite Node.js pour que le <code>Dashboard</code> affiche les informations suivantes :</p>
+<ul>
+<li>Node.js version : <code>18.X.X</code></li>
+<li>Package Manager : <code>npm</code></li>
+<li>Document root : <code>/&lt;path/to/root/document/server&gt;/.next/static</code></li>
+<li>Application mode : <code>production</code></li>
+<li>Application URL : <code>https://&lt;domaine&gt;.fr</code></li>
+<li>Application root : <code>/&lt;path/to/root/document/server&gt;</code></li>
+<li>Application startup file : <code>node_modules/.bin/next</code></li>
+</ul>
+<p>Enfin, cliquez sur <code>+ NPM install</code> pour installer les dépendances du projet, puis allez dans <code>Run Node.js commands</code> et exécutez la commande <code>npm run deploy</code> pour construire le site et redémarrer le serveur.</p>
+<p>Si tout s'est bien passé, vous devriez voir le site <em>https://domaine.fr</em> être accessible.</p>
+<blockquote>
+<p><strong>Note :</strong> Si des erreurs apparaissent, il faut vérifier que les étapes précédentes ont bien été réalisées.</p>
+</blockquote>
+<h2>Déploiement sur le serveur de production</h2>
+<p>Pour déployer le projet, rendez-vous sur le serveur Plesk. Ensuite, allez sur le domaine <code>stuart.crescendo-restauration.fr</code> et cliquez sur <code>Git</code>.</p>
+<p>Ensuite, cliquez sur <code>Pull now</code> pour récupérer les dernières modifications du projet et déployer le projet.</p>
+<p>Ensuite, allez sur le domaine <code>stuart.crescendo-restauration.fr</code> et cliquez sur <code>Node.js</code>.</p>
+<p>Une fois sur la page, cliquez sur <code>NPM install</code> pour installer les dépendances du projet, puis allez dans <code>Run Node.js commands</code> et exécutez la commande <code>npm run deploy</code> pour construire le site et redémarrer le serveur.</p>
+<p>Enfin, visite le site <a href="https://stuart.crescendo-restauration.fr">https://stuart.crescendo-restauration.fr</a> pour voir le résultat.</p>
 </article>
 		<button onclick="scrollToTop()" class="fixed bottom-4 right-4 btn btn-primary btn-outline">
 			<i class="bi bi-arrow-up-square"></i>

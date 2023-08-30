@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl">BSPoke</a>
+      <a href="/" class="btn btn-ghost normal-case text-xl">BSPoke</a>
     </div>
     <div class="navbar-end">
       <button onclick="searchModal.showModal()" class="btn btn-ghost btn-circle">
@@ -60,69 +60,15 @@
     </div>
 </div>
 
-	<main>
-		<article class="prose lg:prose-xl mx-auto max-w-screen-lg px-2"><h1>Déploiement</h1>
-<h2>Prérequis</h2>
-<p>Avant de partir sur le déploiement du projet, assurez d'avoir bien respecté les étapes de la <a href="/documentation">documentation</a> pour le développement.</p>
-<h2>Configuration du serveur</h2>
-<p>Cette étape n'est plus nécessaire, car le serveur est déjà configuré, mais s'il faut refaire la configuration sur un autre serveur, voici les étapes à suivre.</p>
-<p><strong>Note :</strong> Pour réaliser ces étapes, il faut avoir un domaine entier réservé au serveur. Il n'est pas possible de faire cohabiter l'application avec un autre site web sur le même domaine.</p>
-<h3>Ajout du dépôt Git</h3>
-<p>Pour ajouter le dépôt Git, rendez-vous sur le serveur Plesk. Ensuite, allez sur le domaine et cliquez sur <code>Git</code>.</p>
-<p>Ensuite, cliquez sur <code>Add Repository</code> pour ajouter le dépôt Git.</p>
-<p>Ensuite, entrez les informations suivantes :</p>
-<ul>
-<li><strong>Repository name</strong> : <code>stuart</code></li>
-<li><strong>Repository URL</strong> : <code>git@github.com:ServiceInformation/next-stuart.git</code></li>
-<li><strong>Repository branch</strong> : <code>main</code></li>
-<li><strong>Server path</strong> : <code>/path/to/root/document/server</code></li>
-</ul>
-<blockquote>
-<p><strong>Attention :</strong> Si vous êtes sur un serveur ou il y a déjà 1 ou plusieurs dépôts Git, il faut changer le nom du dépôt pour éviter les conflits.</p>
-</blockquote>
-<h3>Configuration du Node.js</h3>
-<p>Pour configurer Node.js, il faut d'abord avoir ajouter le dépôt Git et fait un premier <code>Pull now</code> pour récupérer les fichiers du projet.</p>
-<p>Ensuite, allez sur le domaine et cliquez sur <code>Node.js</code>.</p>
-<blockquote>
-<p>Si vous ne voyez pas <code>Node.js</code>, il faut d'abord installer le module <code>Node.js</code> sur le serveur en cliquant sur <code>Install Application</code> et en sélectionnant <code>Node.js</code>.</p>
-</blockquote>
-<p>Ensuite, cliquez sur <code>Enable Node.js</code> pour activer Node.js sur le domaine. Sélectionnez la version <code>18</code> la plus récente possible et cliquez sur <code>Apply</code>.</p>
-<p>Configurez ensuite Node.js pour que le <code>Dashboard</code> affiche les informations suivantes :</p>
-<ul>
-<li>Node.js version : <code>18.X.X</code></li>
-<li>Package Manager : <code>npm</code></li>
-<li>Document root : <code>/&lt;path/to/root/document/server&gt;/.next/static</code></li>
-<li>Application mode : <code>production</code></li>
-<li>Application URL : <code>https://&lt;domaine&gt;.fr</code></li>
-<li>Application root : <code>/&lt;path/to/root/document/server&gt;</code></li>
-<li>Application startup file : <code>node_modules/.bin/next</code></li>
-</ul>
-<p>Enfin, cliquez sur <code>+ NPM install</code> pour installer les dépendances du projet, puis allez dans <code>Run Node.js commands</code> et exécutez la commande <code>npm run deploy</code> pour construire le site et redémarrer le serveur.</p>
-<p>Si tout s'est bien passé, vous devriez voir le site <em>https://domaine.fr</em> être accessible.</p>
-<blockquote>
-<p><strong>Note :</strong> Si des erreurs apparaissent, il faut vérifier que les étapes précédentes ont bien été réalisées.</p>
-</blockquote>
-<h2>Déploiement sur le serveur de production</h2>
-<p>Pour déployer le projet, rendez-vous sur le serveur Plesk. Ensuite, allez sur le domaine <code>stuart.crescendo-restauration.fr</code> et cliquez sur <code>Git</code>.</p>
-<p>Ensuite, cliquez sur <code>Pull now</code> pour récupérer les dernières modifications du projet et déployer le projet.</p>
-<p>Ensuite, allez sur le domaine <code>stuart.crescendo-restauration.fr</code> et cliquez sur <code>Node.js</code>.</p>
-<p>Une fois sur la page, cliquez sur <code>NPM install</code> pour installer les dépendances du projet, puis allez dans <code>Run Node.js commands</code> et exécutez la commande <code>npm run deploy</code> pour construire le site et redémarrer le serveur.</p>
-<p>Enfin, visite le site <a href="https://stuart.crescendo-restauration.fr">https://stuart.crescendo-restauration.fr</a> pour voir le résultat.</p>
-</article>
-		<button onclick="scrollToTop()" class="fixed bottom-4 right-4 btn btn-primary btn-outline">
-			<i class="bi bi-arrow-up-square"></i>
-			<span class="sr-only">Go to the top</span>
-		</button>
-		<script>
-			function scrollToTop() {
-				window.scrollTo({
-					top: 0,
-					left: 0,
-					behavior: 'smooth'
-				});
-			}
-		</script>
-	</main>
+	<main><div class="hero min-h-screen bg-base-200">
+	<div class="hero-content text-center">
+	  <div class="max-w-md">
+		<h1 class="text-5xl font-bold">Hello there</h1>
+		<p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+		<button class="btn btn-primary">Get Started</button>
+	  </div>
+	</div>
+  </div></main>
 	<footer class="footer p-10 bg-neutral text-neutral-content">
     <div>
       <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
