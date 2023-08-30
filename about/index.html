@@ -12,26 +12,7 @@
 	
 	<link href="/11ty-exemple/_pagefind/pagefind-ui.css" rel="stylesheet">
 	<script src="/11ty-exemple/_pagefind/pagefind-ui.js" type="text/javascript"></script>
-	<script>
-		window.addEventListener('DOMContentLoaded', (event) => {
-			new PagefindUI({
-				element: "#search",
-				translations: {
-					placeholder: "Recherche",
-					clear_search: "x",
-					load_more: "Voir plus de résultats",
-					search_label: "Rechercher sur le site",
-					filters_label: "Filtres",
-					zero_results: "Aucun résultat pour [SEARCH_TERM]",
-					many_results: "[COUNT] résultats pour [SEARCH_TERM]",
-					one_result: "[COUNT] résultat pour [SEARCH_TERM]",
-					alt_search: "Aucun résultats pour [SEARCH_TERM]. Affichez plutôt les résultats pour [DIFFERENT_TERM]",
-					search_suggestion: "Aucun résultats pour [SEARCH_TERM]. Essayez l'une des recherches suivantes:",
-					searching: "Recherche pour [SEARCH_TERM]..."
-				}
-			});
-		});
-	</script>
+	<script src="/11ty-exemple/assets/js/pagefind.js"></script>
 
 	<title>11ty Example</title>
 </head>
@@ -63,8 +44,8 @@
     </button>
   </div>
 </div>
-	<main>
-		<article class="prose lg:prose-xl mx-auto max-w-screen-lg px-2"><h1>A propos du site</h1>
+	<main class="min-h-[calc(100vh-)]">
+		<article class="prose lg:prose-xl mx-auto max-w-screen-lg px-10"><h1>A propos du site</h1>
 <p>Ce site est un site statiquement généré avec <a href="https://www.11ty.dev/">11ty</a> et utilise <a href="https://tailwindcss.com">TailwindCSS</a> + <a href="https://daisyui.com/">DaisyUI</a> pour le style.</p>
 <p>Il sert de site démo pour voir comment fonctionne les site statiquement généré avec 11ty et comment l'intégration de contenu peut se faire.</p>
 </article>
