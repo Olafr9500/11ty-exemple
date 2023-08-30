@@ -31,13 +31,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install 11ty and build website
-        uses: extrawitz/11ty-dockerless-build@v1
+      - name: Install & Build
+        uses: TartanLlama/actions-eleventy@master
         with:
-          args: --pathprefix '11ty-exemple'
+          install_dependencies: true
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: _site
+          publish_dir: _site 
           publish_branch: website
-          github_token: ${{ secrets.PSA }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
