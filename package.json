@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run build",
     "dev": "run-p dev:*",
     "build": "run-s build:*",
     "dev:11ty": "npx @11ty/eleventy --serve --watch",
