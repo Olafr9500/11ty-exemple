@@ -40,4 +40,4 @@ jobs:
         with:
           publish_dir: _site
           publish_branch: main
-          github_token: ${{ secrets.PSA }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
