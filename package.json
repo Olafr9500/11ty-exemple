@@ -7,7 +7,7 @@
     "dev": "run-p dev:*",
     "build": "run-s build:*",
     "dev:11ty": "npx @11ty/eleventy --serve --watch",
-    "build:11ty": "npx @11ty/eleventy",
+    "build:11ty": "npx @11ty/eleventy --pathprefix '11ty-exemple'",
     "dev:search": "npx -y pagefind --source _site --watch",
     "build:search": "npx -y pagefind --source _site",
     "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/index.css --watch --postcss",
