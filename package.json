@@ -1,0 +1,32 @@
+{
+  "name": "static-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run-p dev:*",
+    "build": "run-p build:*",
+    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/index.css --watch --postcss",
+    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/index.css --postcss",
+    "dev:search": "npx -y pagefind --source _site --watch",
+    "build:search": "npx -y pagefind --source _site",
+    "dev:11ty": "npx @11ty/eleventy --serve --watch",
+    "build:11ty": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.15",
+    "daisyui": "^3.6.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "bootstrap-icons": "^1.10.5"
+  }
+}
