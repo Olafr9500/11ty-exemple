@@ -38,28 +38,31 @@
 
 <body>
 	<div class="navbar bg-base-100">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <label tabindex="0" class="btn btn-ghost btn-circle">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
-        </label>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-			<li><a href="/">Homepage</a></li>
-			<li><a href="/deploy">Déploiement</a></li>
-			<li><a href="/about">A propos</a></li>
-		</ul>
-      </div>
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+        </svg>
+      </label>
+      <ul slot="navigation" tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/deploy/">Déploiement</a></li>
+        <li><a href="/about/">A propos</a></li>
+      </ul>
     </div>
-    <div class="navbar-center">
-      <a href="/" class="btn btn-ghost normal-case text-xl">BSPoke</a>
-    </div>
-    <div class="navbar-end">
-      <button onclick="searchModal.showModal()" class="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-      </button>
-    </div>
+  </div>
+  <div class="navbar-center">
+    <a href="/" class="btn btn-ghost normal-case text-xl">BSPoke</a>
+  </div>
+  <div class="navbar-end">
+    <button onclick="searchModal.showModal()" class="btn btn-ghost btn-circle">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+    </button>
+  </div>
 </div>
-
 	<main>
 		<article class="prose lg:prose-xl mx-auto max-w-screen-lg px-2"><h1>A propos du site</h1>
 <p>Ce site est un site statiquement généré avec <a href="https://www.11ty.dev/">11ty</a> et utilise <a href="https://tailwindcss.com">TailwindCSS</a> + <a href="https://daisyui.com/">DaisyUI</a> pour le style.</p>
