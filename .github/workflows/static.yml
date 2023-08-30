@@ -34,6 +34,7 @@ jobs:
       - name: Install & Build
         uses: TartanLlama/actions-eleventy@master
         with:
+          args: --pathprefix '11ty-exemple'
           install_dependencies: true
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
