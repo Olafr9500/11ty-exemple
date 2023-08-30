@@ -8,12 +8,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy({"node_modules/bootstrap-icons/font/bootstrap-icons.css":"assets/css/bootstrap-icons.css"});
     eleventyConfig.addPassthroughCopy({"node_modules/bootstrap-icons/font/fonts":"assets/css/fonts"});
+
+    eleventyConfig.addJavaScriptFunction("url", function(url) {
+        return `/11ty-exemple${url}`;
+    });
     return {
         dir: {
             input: "src",
             layouts: "_layouts",
             output: "_site",
-            pathPrefix: "/11ty-exemple/"
         },
     };
 }
