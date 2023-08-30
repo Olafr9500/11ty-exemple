@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "run-p dev:*",
-    "build": "run-p build:*",
-    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o docs/assets/css/index.css --watch --postcss",
-    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o docs/assets/css/index.css --postcss",
-    "dev:search": "npx -y pagefind --source docs --watch",
-    "build:search": "npx -y pagefind --source docs",
+    "build": "run-s build:*",
     "dev:11ty": "npx @11ty/eleventy --serve --watch",
-    "build:11ty": "npx @11ty/eleventy"
+    "build:11ty": "npx @11ty/eleventy",
+    "dev:search": "npx -y pagefind --source _site --watch",
+    "build:search": "npx -y pagefind --source _site",
+    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/index.css --watch --postcss",
+    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/index.css --postcss"
   },
   "keywords": [],
   "author": "",
