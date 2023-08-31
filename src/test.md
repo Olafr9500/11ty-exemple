@@ -1,5 +1,6 @@
 ---
 layout: doc.webc
+tags: page
 ---
 
 # TEST

@@ -1,5 +1,7 @@
 ---
-layout: "doc.webc"
+layout: doc.webc
+title: Déploiement
+tags: page
 ---
 
 # Déploiement

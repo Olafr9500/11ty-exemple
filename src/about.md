@@ -1,6 +1,9 @@
 ---
 layout: doc.webc
+title: A propos
+tags: page
 ---
+
 # A propos du site
 
 Ce site est un site statiquement généré avec [11ty](https://www.11ty.dev/) et utilise [TailwindCSS](https://tailwindcss.com) + [DaisyUI](https://daisyui.com/) pour le style.
