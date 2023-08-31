@@ -8,14 +8,14 @@
       </label>
       <ul slot="navigation" tabindex="0"
         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a :href="url('/')">Homepage</a></li>
-        <li><a :href="url('/deploy/')">Déploiement</a></li>
-        <li><a :href="url('/about/')">A propos</a></li>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/deploy/">Déploiement</a></li>
+        <li><a href="/about/">A propos</a></li>
       </ul>
     </div>
   </div>
   <div class="navbar-center">
-    <a :href="url('/')" class="btn btn-ghost normal-case text-xl" @text="title">daisyUI</a>
+    <a href="/" class="btn btn-ghost normal-case text-xl" @text="title">BSPoke</a>
   </div>
   <div class="navbar-end">
     <button class="btn btn-ghost btn-circle" onclick="searchModal.showModal()">

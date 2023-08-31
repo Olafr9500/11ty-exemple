@@ -10,9 +10,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({"node_modules/bootstrap-icons/font/bootstrap-icons.css":"assets/css/bootstrap-icons.css"});
     eleventyConfig.addPassthroughCopy({"node_modules/bootstrap-icons/font/fonts":"assets/css/fonts"});
 
-    eleventyConfig.addJavaScriptFunction("url", function(url) {
-        return `/11ty-exemple${url}`;
-    });
+    eleventyConfig.addFilter("currentYear", () => new Date().getFullYear().toString());
+
     return {
         dir: {
             input: "src",

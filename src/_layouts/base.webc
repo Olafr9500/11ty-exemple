@@ -9,19 +9,19 @@
 	<!--- Stylesheet --->
 
 	<!--- Stylesheet --->
-	<link rel="stylesheet" :href="url('/assets/css/index.css')" webc:keep>
-	<link rel="stylesheet" :href="url('/assets/css/bootstrap-icons.css')" webc:keep>
+	<link rel="stylesheet" href="/assets/css/index.css" webc:keep>
+	<link rel="stylesheet" href="/assets/css/bootstrap-icons.css" webc:keep>
 
 	<!--- PageFinder --->
-	<link :href="url('/_pagefind/pagefind-ui.css')" rel="stylesheet" webc:keep>
-	<script :src="url('/_pagefind/pagefind-ui.js')" type="text/javascript" webc:keep></script>
-	<script :src="url('/assets/js/pagefind.js')" webc:keep></script>
+	<link href="/_pagefind/pagefind-ui.css" rel="stylesheet" webc:keep>
+	<script src="/_pagefind/pagefind-ui.js" type="text/javascript" webc:keep></script>
+	<script src="/assets/js/pagefind.js" webc:keep></script>
 
 	<title>11ty Example</title>
 </head>
 
 <body>
-	<bspk-navbar @title="BSPoke"></bspk-navbar>
+	<bspk-navbar @title="Antagene"></bspk-navbar>
 	<main @raw="content"></main>
 	<bspk-footer></bspk-footer>
 	<bspk-search></bspk-search>

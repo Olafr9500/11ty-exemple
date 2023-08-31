@@ -7,9 +7,9 @@
     "postinstall": "npm run build",
     "dev": "run-p dev:*",
     "build": "run-s build:*",
-    "dev:11ty": "npx @11ty/eleventy --serve --watch",
+    "dev:11ty": "npx @11ty/eleventy --watch",
     "build:11ty": "npx @11ty/eleventy",
-    "dev:search": "npx -y pagefind --source _site --watch",
+    "dev:search": "npx -y pagefind --source _site --serve",
     "build:search": "npx -y pagefind --source _site",
     "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/index.css --watch --postcss",
     "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/index.css --postcss"
