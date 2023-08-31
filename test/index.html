@@ -1,2 +1,81 @@
-<h1>TEST</h1>
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<link rel="stylesheet" href="/assets/css/index.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap-icons.css">
+
+	
+	<link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+	<script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+	<script src="/assets/js/pagefind.js"></script>
+
+	<title>11ty Example</title>
+</head>
+
+<body>
+	<div class="navbar bg-base-100">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+        </svg>
+      </label>
+      <ul slot="navigation" tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="/">Homepage</a></li>
+        <li><a href="/deploy/">Déploiement</a></li>
+        <li><a href="/about/">A propos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-center">
+    <a href="/" class="btn btn-ghost normal-case text-xl">Antagene</a>
+  </div>
+  <div class="navbar-end">
+    <button onclick="searchModal.showModal()" class="btn btn-ghost btn-circle">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+	<main class="min-h-[calc(100vh-64px-52px)]">
+		<article class="prose lg:prose-xl mx-auto max-w-screen-lg px-10"><h1>TEST</h1>
 <p>this is a test</p>
+</article>
+		<button onclick="scrollToTop()" class="fixed bottom-4 right-4 btn btn-primary btn-outline">
+			<i class="bi bi-arrow-up-square"></i>
+			<span class="sr-only">Go to the top</span>
+		</button>
+		<script>
+			function scrollToTop() {
+				window.scrollTo({
+					top: 0,
+					left: 0,
+					behavior: 'smooth'
+				});
+			}
+		</script>
+	</main>
+	<footer class="footer footer-center p-4 bg-base-300 text-base-content">
+  <div>
+    <p>Copyright © <span>2023</span></p>
+  </div>
+</footer>
+	<dialog id="searchModal" class="modal">
+    <form method="dialog" class="modal-box">
+        <div id="search"></div>
+    </form>
+    <form method="dialog" class="modal-backdrop">
+      <button>close</button>
+    </form>
+</dialog>
+
+
+</body>
+</html>
